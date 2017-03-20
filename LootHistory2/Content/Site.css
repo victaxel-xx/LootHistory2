@@ -1,0 +1,72 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.dk {
+    color: #C41F3B;
+}
+
+.dh {
+    color: #A330C9;
+}
+
+.druid {
+    color: #FF7D0A;
+}
+
+.hunter {
+    color: #ABD473;
+}
+
+.mage {
+    color: #69CCF0;
+}
+
+.monk {
+    color: #00FF96;
+}
+
+.paladin {
+    color: #F58CBA;
+}
+
+.rogue {
+    color: #D3B53D;
+}
+
+.shaman {
+    color: #0070DE;
+}
+
+.warlock {
+    color: #9482C9;
+}
+
+.warrior {
+    color: #C79C6E;
+}
+
+.priest {
+    color: #000
+}
