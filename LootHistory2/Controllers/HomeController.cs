@@ -34,5 +34,12 @@ namespace LootHistory2.Controllers
 
             return View(model);
         }
+        public ActionResult CharacterLoot()
+        {
+            ViewBag.Message = "Loot information for guild member"; //TODO dynamic name
+            var model = new Models.CharacterLoot();
+
+            return View();
+        }
     }
 }
