@@ -70,3 +70,11 @@ textarea {
 .priest {
     color: #000
 }
+
+.item-link {
+    color: #a335ee;
+}
+
+a:hover {
+    text-decoration: none;
+}

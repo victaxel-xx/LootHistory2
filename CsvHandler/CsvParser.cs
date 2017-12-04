@@ -11,7 +11,7 @@ using System.Diagnostics;
 
 namespace CsvHandler
 {
-    class CsvParser
+    public class CsvParser
     {
         public List<LootEvent> ParseCsv(string url)
         {

@@ -13,8 +13,8 @@ namespace WowApiHandler
     public class GuildHandler
     {
         private const string APIKEY = "93czppz2vrr48y4teztzgjv35dtffbyw";
-        private static string GuildName = "Balls%20Of%20Fury";
-        private static string Realm = "Al'Akir";
+        private static string GuildName = "Untamed";
+        private static string Realm = "Kazzak";
 
         public static List<Character> GetRoster()
         {
