@@ -166,6 +166,7 @@
     <Compile Include="Models\Guild.cs" />
     <Compile Include="Models\LootEventViewModel.cs" />
     <Compile Include="Models\LootList.cs" />
+    <Compile Include="Models\LootTotalsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +175,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\dataTables.bootstrap.min.css" />
+    <EmbeddedResource Include="loot.txt" />
     <Content Include="Scripts\datatable.js" />
     <Content Include="Scripts\dataTables.bootstrap.min.js" />
     <Content Include="favicon.ico" />
@@ -257,6 +259,9 @@
       <Project>{f5348735-828c-4c47-ad80-80898d29cf6b}</Project>
       <Name>WowApiHandler</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

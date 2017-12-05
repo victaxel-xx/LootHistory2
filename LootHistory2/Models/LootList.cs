@@ -8,5 +8,6 @@ namespace LootHistory2.Models
     public class LootList
     {
         public List<LootEventViewModel> Loots { get; set; }
+        public List<LootTotalsViewModel> LootTotals { get; set; }
     }
 }

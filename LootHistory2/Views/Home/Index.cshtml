@@ -4,13 +4,14 @@
 }
 @model LootHistory2.Models.LootList
 
-<h1>Loot</h1>
+<h1>Loot Events</h1>
 <table id="loot-table" class="table table-striped table-bordered">
     <thead>
         <tr>
             <th>Name</th>
             <th>Item</th>
             <th>Boss</th>
+            <th>Date</th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +21,26 @@
                 <td class="@item.Class">@item.PlayerName</td>
                 <td><a class="item-link" href="@item.ItemUrl">@item.Item</a></td>
                 <td>@item.Boss</td>
+                <td>@item.Date</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h1>Totals</h1>
+<table id="loot-count-table" class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Lootpieces</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.LootTotals)
+        { 
+            <tr>
+                <td class="@item.Class">@item.Name</td>
+                <td>@item.LootPieces</td>
             </tr>
         }
     </tbody>
