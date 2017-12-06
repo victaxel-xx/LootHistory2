@@ -8,7 +8,7 @@ namespace LootHistory2.Models
     public class LootEventViewModel
     {
         public string PlayerName { get; set; }
-        public DateTime Date { get; set; }
+        public string Date { get; set; }
         public string Item { get; set; }
         public int ItemId { get; set; }
         public bool IsAwardReason { get; set; }

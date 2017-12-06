@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LootHistory2.Models;
 using CsvHelper.Configuration;
+using System.Globalization;
 
 namespace CsvHandler
 {

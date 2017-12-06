@@ -26,18 +26,19 @@ namespace LootHistory2.Controllers
 
             foreach (var item in list)
             {
-                if (lootTotalsDict.ContainsKey(item.Player))
+                var playerName = TrimName(item.Player);
+                if (lootTotalsDict.ContainsKey(playerName))
                 {
-                    lootTotalsDict[item.Player]++;
-                    var match = lootTotalsList.Where(p => p.Name == item.Player).FirstOrDefault();
+                    lootTotalsDict[playerName]++;
+                    var match = lootTotalsList.Where(p => p.Name == playerName).FirstOrDefault();
                     match.LootPieces++;
                 }
                 else
                 {
-                    lootTotalsDict.Add(item.Player, 1);
+                    lootTotalsDict.Add(playerName, 1);
                     lootTotalsList.Add(new LootTotalsViewModel()
                     {
-                        Name = item.Player,
+                        Name = playerName,
                         Class = item.Class.ToLower(),
                         LootPieces = 1
                     });
@@ -46,9 +47,10 @@ namespace LootHistory2.Controllers
 
             foreach (var item in list)
             {
+
                 var loot = new LootEventViewModel()
                 {
-                    PlayerName = item.Player,
+                    PlayerName = TrimName(item.Player),
                     Date = item.Date,
                     Item = item.Item,
                     Boss = item.Boss,
@@ -64,6 +66,15 @@ namespace LootHistory2.Controllers
             lootList.LootTotals = lootTotalsList;
 
             return View(lootList);
+        }
+
+        public string TrimName (string playerName)
+        {
+            var newName = String.Empty;
+            int indexOfSteam = playerName.IndexOf("-");
+            if (indexOfSteam >= 0)
+                newName = playerName.Remove(indexOfSteam);
+            return newName;
         }
 
         public ActionResult About()

@@ -10,8 +10,8 @@ namespace LootHistory2.Models
         public int LootEventId { get; set; }
         public int CharacterId { get; set; }
         public string Player { get; set; }
-        public DateTime Date { get; set; }
-        public DateTime Time { get; set; }
+        public string Date { get; set; }
+        public string Time { get; set; }
         public string Item { get; set; }
         public int ItemId { get; set; }
         public string ItemString { get; set; }
